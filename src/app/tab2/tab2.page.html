@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      NÚMERO DE CASOS NO BRASIL
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+
+  <ion-card *ngFor="let corona of lista_corona" class="espaco" >
+      
+    <div class="fundo">
+    <ion-card-header>
+      <ion-card-subtitle>{{corona.state}}</ion-card-subtitle>
+      <ion-card-title color="dark">{{corona.uf}}</ion-card-title>
+    </ion-card-header>
+  </div>
+    <ion-card-content>
+  <ion-label  class="azul" > <strong>Casos Confirmados:</strong> {{corona.cases}} </ion-label>
+  <br>
+  <ion-label class="verde"> <strong>Novos Suspeitos:</strong> {{corona.suspects}} </ion-label>
+  <br>
+  <ion-label class="vermelho"> <strong>Nº de Mortos:</strong>  {{corona.deaths}} </ion-label>
+    </ion-card-content>
+  
+  </ion-card>
+  
+</ion-content>
